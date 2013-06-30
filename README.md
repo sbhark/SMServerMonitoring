@@ -17,6 +17,8 @@ The architecture of the application is quite simple. All the servers are individ
 collects all data that is sent by the node actors being monitored. As the application embraces the Akka Actor system all 
 messages received are processed asynchronously allowing for high performance and efficiency. 
 
+For storing data I am using MongoDB as the database server its extremely simple to use and is a highly performant database. 
+
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
 1) Twitter 
