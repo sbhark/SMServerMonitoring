@@ -35,7 +35,9 @@ Although this is a simple application there are still people out there who like 
 has some security in place. 
 1) A master server must have a unique hash of all servers being monitored. This blocks out any unauthorized servers from 
 trying to send data to the master server.
+
 2) All data sent over is encrypted to discourage snooping of data. 
+
 3) The actor based system cannot be terminated remotely. This will prevent any accidental shut-downs and possible malicious 
 attempts.
 
@@ -43,12 +45,15 @@ Application Configuration / Installation
 ===================
 *Work in progress 
 *I developed this on a Debian 7.0 (Wheezy) machine and I only guarantee that the guide below works on Debian based platorms.
-) Make sure you have Scala installed on your system. 
+1) Make sure you have Scala installed on your system. 
+
   - To install on Debian Run apt-get install scala
-  - 
-) 
-) Download the smmonitoring-master.jar for the master server to receive monitoring data in the JAR directory in this repo. 
-) Download the smmonitoring-client.jar for any servers to be monitored in the JAR directory in this repository. 
+  
+2) 
+
+3) Download the smmonitoring-master.jar for the master server to receive monitoring data in the JAR directory in this repo. 
+
+4) Download the smmonitoring-client.jar for any servers to be monitored in the JAR directory in this repository. 
 
 
 
@@ -56,6 +61,7 @@ RoadMap
 ==================
 Assuming that I have time to continuously work on this application this is what I plan to do: 
 1) Additional third party API integrations for sending out alerts. 
+
 2) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
 master server can send other commands to be executed which means that well its up to your imagination :)
 
