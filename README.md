@@ -45,7 +45,9 @@ attempts.
 Application Configuration / Installation 
 ===================
 *Work in progress 
+
 *I developed this on a Debian 7.0 (Wheezy) machine and I only guarantee that the guide below works on Debian based platorms.
+
 1) Make sure you have Scala installed on your system. 
 
   - To install on Debian Run apt-get install scala
