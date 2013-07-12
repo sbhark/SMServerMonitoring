@@ -23,6 +23,7 @@ For data storage MongoDB is used and the application connects to the DB by using
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
 1) Twitter 
+
 2) Twilio 
 
 Sending alerts by email is on by default the master-server. It will try and send via the local SMTP server installed on the 
