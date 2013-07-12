@@ -7,17 +7,18 @@ This application is still a work in progress.
 About 
 ==================
 This application is not a replacement of existing production quality monitoring softwares such as Nagios and Zabbix. 
-I created this application to learn more about Scala / Akka Actors and to monitor my own set of servers. 
+It is a possible complementary solution but again not a replacement. 
 
-Note: I am / will be using this application in my own production environment servers used to provide hosting services to customers.
+Note: I am / will be using this application in my own production environment. 
 
 Architecture 
 ==================
 The architecture of the application is quite simple. All the servers are individual actors. There is one master actor which
 collects all data that is sent by the node actors being monitored. As the application embraces the Akka Actor system all 
-messages received are processed asynchronously allowing for high performance and efficiency. 
+messages received are processed asynchronously allowing for high performance and efficiency. In addition, there is low CPU and 
+memory usage on the system so this application will have minimal affect on any server. 
 
-For storing data I am using MongoDB as the database server its extremely simple to use and is a highly performant database. 
+For data storage MongoDB is used and the application connects to the DB by using ReactiveMongoDB Database driver. 
 
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
@@ -39,7 +40,7 @@ attempts.
 
 Application Configuration / Installation 
 ===================
-*WOrk in progress 
+*Work in progress 
 *I developed this on a Debian 7.0 (Wheezy) machine and I only guarantee that the guide below works on Debian based platorms.
 ) Make sure you have Scala installed on your system. 
   - To install on Debian Run apt-get install scala
@@ -53,8 +54,9 @@ Application Configuration / Installation
 RoadMap
 ==================
 Assuming that I have time to continuously work on this application this is what I plan to do: 
-1) Improve codebase and have a suite of unit and integration tests. 
-2) Additional third party API integrations for sending out alerts. 
+1) Additional third party API integrations for sending out alerts. 
+2) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
+master server can send other commands to be executed which means that well its up to your imagination :)
 
 Questions / Feedback 
 ==================
