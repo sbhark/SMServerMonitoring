@@ -31,7 +31,7 @@ system be it postfix or sendmail or some other server.
 
 Security 
 ==================
-Although this is a simple application there are still people out there who like to exploit software. So the application 
+Although this is a simple application there are still people out there who like to exploit and destroy. So the application 
 has some security in place. 
 1) A master server must have a unique hash of all servers being monitored. This blocks out any unauthorized servers from 
 trying to send data to the master server.
