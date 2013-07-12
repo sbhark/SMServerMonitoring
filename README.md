@@ -22,6 +22,7 @@ For data storage MongoDB is used and the application connects to the DB by using
 
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
+
 1) Twitter 
 
 2) Twilio 
@@ -63,6 +64,7 @@ Application Configuration / Installation
 RoadMap
 ==================
 Assuming that I have time to continuously work on this application this is what I plan to do: 
+
 1) Additional third party API integrations for sending out alerts. 
 
 2) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
