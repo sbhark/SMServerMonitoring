@@ -2,11 +2,11 @@ SMServerMonitoring
 ==================
 
 Simple Server Monitoring Application written in Scala. 
-This application is still a work in progress. 
+This application is still a work in progress.
 
 About 
 ==================
-This application is not a replacement of existing production quality monitoring softwares such as Nagios and Zabbix. 
+This application is not a replacement of existing production quality monitoring softwares such as Nagios or Zabbix. 
 It is a possible complementary solution but again not a replacement. 
 
 Note: I am / will be using this application in my own production environment. 
@@ -20,6 +20,17 @@ memory usage on the system so this application will have minimal affect on any s
 
 For data storage MongoDB is used and the application connects to the DB by using ReactiveMongoDB Database driver. 
 
+The following data are collected on a specified interval, default interval is every 1 minute: 
+1) System load 
+2) RAM Usage
+3) SWAP Usage
+4) Disk Usage
+5) Uptime
+6) System logins 
+7) Network statistics
+  - Total Recieved Packets 
+  - Total Outbound Packets 
+
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
 
@@ -30,6 +41,13 @@ or unstable.
 Sending alerts by email is on by default the master-server. It will try and send via the local SMTP server installed on the 
 system be it postfix or sendmail or some other server. 
 
+All data that is sent by servers being monitored can be viewable by a web interface that simply visualizes the data. 
+
+
+Web Interface
+==================
+All data that exists in the database can be viewable by a web interface. 
+
 Security 
 ==================
 Although this is a simple application there are still people out there who like to exploit and destroy. So the application 
@@ -37,7 +55,6 @@ has some security in place.
 
 1) A master server must have a unique hash of all servers being monitored. This blocks out any unauthorized servers from 
 trying to send data to the master server.
-
 2) All data sent over is encrypted to discourage snooping of data. 
 
 3) The actor based system cannot be terminated remotely. This will prevent any accidental shut-downs and possible malicious 
@@ -67,7 +84,9 @@ Assuming that I have time to continuously work on this application this is what 
 
 1) Additional third party API integrations for sending out alerts. 
 
-2) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
+2) Plugin architecture so that third party code can be easily integrated. 
+
+3) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
 master server can send other commands to be executed which means that well its up to your imagination :)
 
 Questions / Feedback 
