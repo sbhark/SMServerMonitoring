@@ -21,12 +21,19 @@ memory usage on the system so this application will have minimal affect on any s
 For data storage MongoDB is used and the application connects to the DB by using ReactiveMongoDB Database driver. 
 
 The following data are collected on a specified interval, default interval is every 1 minute: 
+
 1) System load 
+
 2) RAM Usage
+
 3) SWAP Usage
+
 4) Disk Usage
+
 5) Uptime
+
 6) System logins 
+
 7) Network statistics
   - Total Recieved Packets 
   - Total Outbound Packets 
