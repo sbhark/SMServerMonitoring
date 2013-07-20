@@ -59,7 +59,9 @@ my application than worry about the schema :)
 
 Web Interface
 ==================
-All data that exists in the database can be viewable by a web interface. 
+All data that exists in the database can be viewable by a web interface. The interface just queries the database for data 
+of all servers and just presents it. As data can be collected over a long period of time the data visible is per day to reduce 
+connectivity strains. 
 
 Security 
 ==================
@@ -99,7 +101,9 @@ Assuming that I have time to continuously work on this application this is what 
 
 2) Plugin architecture so that third party code can be easily integrated. 
 
-3) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
+3) A RESTFUL HTTP API so you can create your own interfaces or views. 
+
+4) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
 master server can send other commands to be executed which means that well its up to your imagination :)
 
 Questions / Feedback 
