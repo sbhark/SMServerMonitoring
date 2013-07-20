@@ -20,7 +20,8 @@ memory usage on the system so this application will have minimal affect on any s
 
 For data storage MongoDB is used and the application connects to the DB by using ReactiveMongoDB Database driver. 
 
-The following data are collected on a specified interval, default interval is every 1 minute: 
+The following data are collected on a specified interval, default interval is every 1 minute. The interval can be specified 
+during setup and if it needs to be modified in the future edit the database entry for polling interval. 
 
 1) System load 
 
