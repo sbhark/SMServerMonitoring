@@ -51,6 +51,11 @@ system be it postfix or sendmail or some other server.
 
 All data that is sent by servers being monitored can be viewable by a web interface that simply visualizes the data. 
 
+Database
+==================
+I chose MongoDB because well I just wanted to learn about NoSQL databases and indeed I have learned more about it. I may in the future 
+support MySQL or some other relational database but that requires defining a DB schema and what not and I rather focus on the functionality of 
+my application than worry about the schema :) 
 
 Web Interface
 ==================
