@@ -2,6 +2,7 @@ SMServerMonitoring
 ==================
 
 Simple Server Monitoring Application written in Scala. 
+
 This application is still a work in progress.
 
 About 
