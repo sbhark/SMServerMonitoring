@@ -19,7 +19,7 @@ collects all data that is sent by the node actors being monitored. As the applic
 messages received are processed asynchronously allowing for high performance and efficiency. In addition, there is low CPU and 
 memory usage on the system so this application will have minimal affect on any server. 
 
-For data storage MongoDB is used and the application connects to the DB by using ReactiveMongoDB Database driver. 
+For data storage MongoDB is used and the application connects to the DB by using the Casbah Scala driver. 
 
 The following data are collected on a specified interval, default interval is every 1 minute. The interval can be specified 
 during setup and if it needs to be modified in the future edit the database entry for polling interval. 
@@ -38,16 +38,22 @@ during setup and if it needs to be modified in the future edit the database entr
 
 7) Network statistics
   - Total Recieved Packets 
-  - Total Outbound Packets 
+  - Total Outbound Packets
+  - Total Received Traffic 
+  - Total Outbound Traffic  
 
 There are currently several external APIS that are being used to sending out alerts in case a monitoring server is down 
 or unstable. 
 
-1) Twitter 
+1) Twitter - Twitter Direct Message
 
-2) Twilio 
+2) Twilio - SMS, Voice Alerts
 
-Sending alerts by email is on by default the master-server. It will try and send via the local SMTP server installed on the 
+3) Mandrill - Sending out Email Alerts
+
+4) Custom Mail Server - Sending out email alerts via custom mail server
+
+Sending alerts by email is on by default the master-server. By default tt will try and send via the local SMTP server installed on the 
 system be it postfix or sendmail or some other server. 
 
 All data that is sent by servers being monitored can be viewable by a web interface that simply visualizes the data. 
