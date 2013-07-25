@@ -1,7 +1,7 @@
 SMServerMonitoring
 ==================
 
-Simple Server Monitoring Application written in Scala. 
+Simple Server Monitoring Application written in Scala and uses several Java libraries. 
 
 This application is still a work in progress.
 
@@ -10,7 +10,7 @@ About
 This application is not a replacement of existing production quality monitoring softwares such as Nagios or Zabbix. 
 It is a possible complementary solution but again not a replacement. 
 
-Note: I am / will be using this application in my own production environment. 
+Note: I plan to use this on my own production environment.  
 
 Architecture 
 ==================
@@ -22,7 +22,7 @@ memory usage on the system so this application will have minimal affect on any s
 For data storage MongoDB is used and the application connects to the DB by using the Casbah Scala driver. 
 
 The following data are collected on a specified interval, default interval is every 1 minute. The interval can be specified 
-during setup and if it needs to be modified in the future edit the database entry for polling interval. 
+during setup and if it needs to be modified in the future, edit the database entry for polling interval. 
 
 1) System load 
 
@@ -67,7 +67,7 @@ my application than worry about the schema :)
 Web Interface
 ==================
 All data that exists in the database can be viewable by a web interface. The interface just queries the database for data 
-of all servers and just presents it. As data can be collected over a long period of time the data visible is per day to reduce 
+of all servers and just presents it. As data can be collected over a long period of time, the data visible is per day to reduce 
 connectivity strains. 
 
 Security 
@@ -77,10 +77,13 @@ has some security in place.
 
 1) A master server must have a unique hash of all servers being monitored. This blocks out any unauthorized servers from 
 trying to send data to the master server.
+
 2) All data sent over is encrypted to discourage snooping of data. 
 
 3) The actor based system cannot be terminated remotely. This will prevent any accidental shut-downs and possible malicious 
 attempts.
+
+4) All data that the master server receives is verified to make sure it is of the right structure, if not then the data is ignored. If there are more than 5 attempts to send incorrect or corrupt data the offending message producer will be blocked and a CRITICAL alert sent out. 
 
 Application Configuration / Installation 
 ===================
