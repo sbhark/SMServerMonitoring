@@ -1,0 +1,11 @@
+language: scala
+
+scala: 
+  - 2.10.0
+
+notifications: 
+  email: 
+    recipients: 
+      - sxb5828@rit.edu
+    on_success: always
+    on_failure: always
