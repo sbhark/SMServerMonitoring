@@ -9,3 +9,9 @@ notifications:
       - sxb5828@rit.edu
     on_success: always
     on_failure: always
+
+script: 
+#build installer 
+  mvn clean package -f smmonitoring/pom.xml
+
+#build 
