@@ -10,13 +10,12 @@ notifications:
     on_success: always
     on_failure: always
 
-script: 
-#build installer 
-  mvn clean package -f smmonitoringsetup/pom.xml
+script:
+  #build setup   
+  - mvn clean package -f smmonitoringsetup/pom.xml
 
-#build server 
-  mvn clean package -f smmmonitoring/pom.xml
+  #build server 
+  - mvn clean package -f smmmonitoring/pom.xml
 
-#build client 
-  mvn clean package -f smmonitoringclient/pom.xml
- 
+  #build client 
+  - mvn clean package -f smmonitoringclient/pom.xmli 
