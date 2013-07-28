@@ -1,4 +1,4 @@
-https://travis-ci.org/sbhark/SMServerMonitoring.png
+[![Build Status](https://travis-ci.org/sbhark/SMServerMonitoring.png)](https://travis-ci.org/sbhark/SMServerMonitoring)
 
 SMServerMonitoring
 ==================
