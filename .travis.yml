@@ -9,6 +9,7 @@ notifications:
       - sxb5828@rit.edu
     on_success: always
     on_failure: always
+    on_error: always
 
 script:
   #build setup   
