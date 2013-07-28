@@ -1,3 +1,5 @@
+https://travis-ci.org/sbhark/SMServerMonitoring.png
+
 SMServerMonitoring
 ==================
 
