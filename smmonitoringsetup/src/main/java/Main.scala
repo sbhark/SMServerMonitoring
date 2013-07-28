@@ -1,7 +1,4 @@
 import scala.sys.process.Process
-import reactivemongo.api.MongoConnection
-import reactivemongo.core.actors.Authenticate
-
 object Main {
   
   /** 
