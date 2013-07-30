@@ -51,9 +51,8 @@
     </dependency>
     <dependency>
       <groupId>org.mongodb</groupId>
-      <artifactId>casbah_2.9.2</artifactId>
+      <artifactId>casbah_2.10</artifactId>
       <version>2.6.1</version>
-      <scope>compile</scope>
       <type>pom</type>
     </dependency>
     <dependency>
@@ -61,6 +60,11 @@
       <artifactId>akka-actor_2.10</artifactId>
       <version>2.1.0</version>
     </dependency> 
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId> 
+      <version>1.7.5</version>
+    </dependency>
   </dependencies>
 <build>
     	<plugins>
@@ -79,7 +83,7 @@
                     <sourceDir>src/main/java</sourceDir>
                     <jvmArgs>
                         <jvmArg>-Xms64m</jvmArg>
-                        <jvmArg>-Xmx1024m</jvmArg>
+                        <jvmArg>-Xmx128m</jvmArg>
                     </jvmArgs>
                 </configuration>
             </plugin>
@@ -91,6 +95,17 @@
                     <target>1.7</target>
                     <executable>${env.JAVA_HOME_7}/bin/javac</executable>
                 </configuration>
+            </plugin>
+	    <plugin> 
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <configuration>
+                <archive> 
+                  <manifest>
+                    <mainClass>Main</mainClass>
+                  </manifest>
+                </archive>
+              </configuration>
             </plugin>
         </plugins>
     </build>
