@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/sbhark/SMServerMonitoring.png)](https://travis-ci.org/sbhark/SMServerMonitoring)
+[![Build Status](https://travis-ci.org/sbhark/kimchi.png)](https://travis-ci.org/sbhark/kimchi)
 
-SMServerMonitoring
+Kimchi Server Monitoring
 ==================
 
-Simple Server Monitoring Application written in Scala and uses several Java libraries. 
+Kimchi Server Monitoring application is written in Scala and uses several Java libraries. 
 
 This application is still a work in progress.
 
@@ -83,27 +83,25 @@ trying to send data to the master server.
 2) All data sent over is encrypted to discourage snooping of data. 
 
 3) The actor based system cannot be terminated remotely. This will prevent any accidental shut-downs and possible malicious 
-attempts.
-
-4) All data that the master server receives is verified to make sure it is of the right structure, if not then the data is ignored. If there are more than 5 attempts to send incorrect or corrupt data the offending message producer will be blocked and a CRITICAL alert sent out. 
+attempts. 
 
 Application Configuration / Installation 
 ===================
 *Work in progress 
 
-*I developed this on a Debian 7.0 (Wheezy) machine and I only guarantee that the guide below works on Debian based platorms.
+Windows Not Supported, sorry :) 
 
-1) Make sure you have Scala installed on your system. 
+Debian OS: 
 
-  - To install on Debian Run apt-get install scala
-  
-2) 
+Add my Debian repository info.
 
-3) Download the smmonitoring-master.jar for the master server to receive monitoring data in the JAR directory in this repo. 
+To install a Master Server: 
+1) apt-get install kimchi-server 
 
-4) Download the smmonitoring-client.jar for any servers to be monitored in the JAR directory in this repository. 
+To install a Monitoring Node Client: 
+2) apt-get install kimchi-client
 
-
+Other OS: 
 
 RoadMap
 ==================
