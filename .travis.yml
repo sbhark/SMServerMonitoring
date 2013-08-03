@@ -14,10 +14,10 @@ notifications:
 script: 
   #mvn assembly:assembly -DdescriptorId=jar-with-dependencies
   #build setup   
-  - mvn clean package -f smmonitoringsetup/pom.xml
+  - mvn clean package -f kimchisetup/pom.xml
 
   #build server 
-  - mvn clean package -f smmonitoring/pom.xml
+  - mvn clean package -f kimchiserver/pom.xml
 
   #build client 
-  - mvn clean package -f smmonitoringclient/pom.xml
+  - mvn clean package -f kimchiclient/pom.xml
