@@ -1,4 +1,6 @@
 import scala.sys.process.Process
+import com.mongodb.casbah.Imports._
+
 object Main {
   
   /** 
@@ -18,10 +20,19 @@ object Main {
   private def initialSetupServer() { 
     
     println("Starting setup of new server...\n")
+
     //Create New Database 
     println("Establishing connection to db")
-    
-    
+
+    val client = MongoClient("localhost", 27017)
+
+    val database = client("serveriris")
+    val setupCollection = database("configuration")
+
+    val testInsert = MongoDBObject("Server" -> "localdomain.tld", "Uptime" -> "5 Days")
+    setupCollection.insert(testInsert)
+
+    println("finished")
   }
   
   /** 
@@ -54,8 +65,8 @@ object Main {
     println("Hey there! Just a few questions below to setup your monitoring server. \n")
     println("At any time during input press q to quit setup\n")
     println("Please select from the following options: \n")
-    println("1 - Setting up a new monitoring server \n") 
-    println("2 - Adding new nodes to monitor \n") 
+    println("1 - Set up new master server \n")
+    println("2 - Add new nodes to monitor\n")
     
     for ( input <- io.Source.stdin.getLines ) { 
       input match { 
