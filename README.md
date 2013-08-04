@@ -93,7 +93,7 @@ Windows Not Supported, sorry :)
 
 Debian OS: 
 
-Add my Debian repository info.
+TODO: Add my Debian repository info.
 
 To install a Master Server: 
 1) apt-get install kimchi-server 
@@ -113,7 +113,9 @@ Assuming that I have time to continuously work on this application this is what 
 
 3) A RESTFUL HTTP API so you can create your own interfaces or views. 
 
-4) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
+4) Real time network stats (KBPS, MBPS, Packets per second, etc)
+
+5) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
 master server can send other commands to be executed which means that well its up to your imagination :)
 
 Questions / Feedback 
