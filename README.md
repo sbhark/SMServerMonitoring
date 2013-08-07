@@ -105,7 +105,7 @@ Other OS:
 
 RoadMap
 ==================
-Assuming that I have time to continuously work on this application this is what I plan to do: 
+Assuming that I have time to continuously work on this application this is what I plan to do in priority order: 
 
 1) Additional third party API integrations for sending out alerts. 
 
@@ -115,7 +115,12 @@ Assuming that I have time to continuously work on this application this is what 
 
 4) Real time network stats (KBPS, MBPS, Packets per second, etc)
 
-5) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
+5) Ability to monitor services such as Apache, Nginx, sendmail and attempt to restart / stop the services if an error or failure is 
+detected and capture any logs generated at the time of the error / failure. 
+
+6) Talk with loadbalancers to dynamically route traffic. 
+
+7) I think this monitoring system can be easily expanded so that each monitoring server can also talk with other servers. Or the 
 master server can send other commands to be executed which means that well its up to your imagination :)
 
 Questions / Feedback 
